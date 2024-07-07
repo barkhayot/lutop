@@ -31,9 +31,7 @@ def get_top_processes_by_memory(num_processes=10):
             psutil.ZombieProcess,
         ):
             pass
-    processes = sorted(
-        processes, key=lambda p: p["memory_percent"], reverse=True
-    )
+    processes = sorted(processes, key=lambda p: p["memory_percent"], reverse=True)
     return processes[:num_processes]
 
 
@@ -68,9 +66,7 @@ def display_system_info(screen, mem, swap, cpu, processes):
 
     # CPU Usage
     cpu_info_start_y = 0
-    screen.addstr(
-        cpu_info_start_y, 0, "CPU Usage".center(width), curses.A_BOLD
-    )
+    screen.addstr(cpu_info_start_y, 0, "CPU Usage".center(width), curses.A_BOLD)
     col_width = (width - 2) // 2  # Width for each column
     for i, cpu_percent in enumerate(cpu):
         col = i % 2  # Determine the column (0 or 1)
@@ -98,9 +94,7 @@ def display_system_info(screen, mem, swap, cpu, processes):
 
     # Memory Information
     mem_info_start_y = cpu_info_start_y + (len(cpu) // 2) + 2
-    screen.addstr(
-        mem_info_start_y, 0, "Memory Usage".center(width), curses.A_BOLD
-    )
+    screen.addstr(mem_info_start_y, 0, "Memory Usage".center(width), curses.A_BOLD)
     color_pair = curses.color_pair(
         1 if mem.percent < 50 else 2 if mem.percent < 75 else 3
     )
@@ -133,9 +127,7 @@ def display_system_info(screen, mem, swap, cpu, processes):
 
     # Swap Information
     swap_info_start_y = mem_info_start_y + 5
-    screen.addstr(
-        swap_info_start_y, 0, "Swap Usage".center(width), curses.A_BOLD
-    )
+    screen.addstr(swap_info_start_y, 0, "Swap Usage".center(width), curses.A_BOLD)
     color_pair = curses.color_pair(
         1 if swap.percent < 50 else 2 if swap.percent < 75 else 3
     )
