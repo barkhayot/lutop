@@ -12,25 +12,30 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
+
     - uses: actions/cache@v3
       with:
         path: ~/.cache/pip
         key: ${{ hashFiles('requirements.txt') }}
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+
     - name: Run black to review standard code format
       run: |
-        # Checks if need to reformat files
         black --check --diff .
+
     - name: Run flake8 to check specific rules not covered by black
       run: |
         flake8 . --statistics
+
     - name: Test with pytest
       run: |
         python -m pytest tests/
