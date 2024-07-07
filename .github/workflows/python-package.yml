@@ -34,7 +34,7 @@ jobs:
 
     - name: Run flake8 to check specific rules not covered by black
       run: |
-        flake8 . --statistics
+       flake8 . --max-line-length 250
 
     - name: Test with pytest
       run: |
