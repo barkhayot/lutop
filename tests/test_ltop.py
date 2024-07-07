@@ -1,11 +1,16 @@
 import unittest
-from unittest.mock import patch
-from io import StringIO
 import curses
 import psutil
 
 # Import functions/classes from your ltop.py script
-from ltop import get_system_info, get_top_processes_by_memory, draw_progress_bar, safe_addstr, display_system_info
+from ltop import (
+    get_system_info,
+    get_top_processes_by_memory,
+    draw_progress_bar,
+    safe_addstr,
+    display_system_info,
+)
+
 
 class TestLtop(unittest.TestCase):
 
@@ -53,6 +58,6 @@ class TestLtop(unittest.TestCase):
         finally:
             curses.endwin()
 
-if __name__ == '__main__':
-    unittest.main()
 
+if __name__ == "__main__":
+    unittest.main()
