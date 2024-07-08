@@ -1,6 +1,5 @@
 import psutil
 import curses
-import time
 
 
 def get_system_info():
