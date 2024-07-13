@@ -1,1 +1,1 @@
-from .lutop import main # noqa
+from .lutop import main  # noqa
