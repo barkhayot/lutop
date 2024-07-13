@@ -1,8 +1,8 @@
-# ltop User Manual
+# lutop User Manual
 
 ## Introduction
 
-Welcome to ltop (Lightweight System Monitor), a terminal-based system monitoring application inspired by Unix `top` command and designed using Python and curses library.
+Welcome to lutop (Lightweight System Monitor), a terminal-based system monitoring application inspired by Unix `top` command and designed using Python and curses library.
 
 ## Table of Contents
 
@@ -21,13 +21,13 @@ Welcome to ltop (Lightweight System Monitor), a terminal-based system monitoring
 - pip (Python package installer)
 - curses (Python standard library for terminal handling)
 
-### Install ltop
+### Install lutop
 
 1. Clone the repository:
 
 ```bash
-   git clone https://github.com/barkhayot/ltop.git
-   cd ltop
+   git clone https://github.com/barkhayot/lutop.git
+   cd lutop
 ```
 
 2. Install dependencies:
@@ -35,10 +35,10 @@ Welcome to ltop (Lightweight System Monitor), a terminal-based system monitoring
 pip install -r requirements.txt
 ```
 ## Usage
-To start ltop, simply run the following command in your terminal:
+To start lutop, simply run the following command in your terminal:
 
 ```bash
-python ltop.py
+python lutop.py
 ```
 ### Key Commands
 - Quit: Press Ctrl + D to quit the application.
