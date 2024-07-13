@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="lutop",
-    version='{{VERSION_PLACEHOLDER}}',
+    version="{{VERSION_PLACEHOLDER}}",
     packages=find_packages(),
     install_requires=[
         "psutil",
