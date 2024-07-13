@@ -4,7 +4,8 @@ on:
   push:
     tags:
       - 'v*'
-
+  workflow_dispatch:
+  
 jobs:
   publish:
     name: Build and publish distribution 📦 to PyPI
