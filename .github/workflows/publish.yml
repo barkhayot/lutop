@@ -26,13 +26,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install setuptools wheel twine
 
-      - name: Tag current commit
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git tag -a ${{ github.ref }} -m "Automated tag for version ${GITHUB_REF##*/}"
-          git push origin ${{ github.ref }}
-
       - name: Build package
         run: |
           python setup.py sdist bdist_wheel
