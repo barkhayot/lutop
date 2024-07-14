@@ -14,7 +14,7 @@ setup(
     },
     python_requires=">=3.6",
     description="A utility to monitor system resources and top processes.",
-    long_description=open("README.md").read(),
+    long_description=open("media/index.md").read(),
     long_description_content_type="text/markdown",
     author="Barkhayot Juraev",
     author_email="barkhayotoff@email.com",
