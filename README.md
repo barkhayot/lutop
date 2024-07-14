@@ -19,3 +19,6 @@ python lutop.py
 ```
 
 ![Usage Demo](media/demo.gif)
+
+### Contributing
+We welcome contributions! If you discover a bug in this project, please feel free to open an issue to discuss the changes you would like to propose.
