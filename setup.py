@@ -6,6 +6,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         "psutil",
+        "windows-curses; platform_system == 'Windows'",
     ],
     entry_points={
         "console_scripts": [

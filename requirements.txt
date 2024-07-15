@@ -1,4 +1,5 @@
 psutil==6.0.0
+windows-curses; platform_system == "Windows"
 flake8
 black
 setuptools
