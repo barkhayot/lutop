@@ -85,7 +85,7 @@ def display_system_info(screen, mem, swap, cpu, processes):
     draw_progress_bar(
         screen, mem_info_start_y + 1, 0, width - 2, mem.percent, color_pair
     )
-    safe_addstr(
+    safe_addstr( 
         screen, mem_info_start_y + 1, width - 8, f"{mem.percent:.2f}%", curses.A_BOLD
     )
 
