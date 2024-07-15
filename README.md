@@ -15,7 +15,7 @@ pip install lutop
 To start lutop, simply run the following command in your terminal:
 
 ```bash
-python lutop.py
+lutop
 ```
 
 ![Usage Demo](media/demo.gif)
