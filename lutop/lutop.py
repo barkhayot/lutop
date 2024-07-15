@@ -63,7 +63,7 @@ def display_system_info(screen, mem, swap, cpu, processes):
         color_pair = curses.color_pair(
             1 if cpu_percent < 50 else 2 if cpu_percent < 75 else 3
         )
-        core_label = f" Core {i}:".ljust(8)
+        core_label = f" Core {i + 1}:".ljust(8)
         core_x = col * col_width
         draw_progress_bar(
             screen,
